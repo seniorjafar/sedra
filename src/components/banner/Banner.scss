@@ -1,0 +1,50 @@
+
+.banner{
+    margin-top: 32px;
+    .banner__content{
+        background-image: url(../../assets/Frame.png);
+        padding: 65px;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        font-family: Lexend;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 54px;
+        letter-spacing: -0.05em;
+        text-align: center;
+    }
+    p{
+        font-family: Lexend;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+        width: 560px;
+    }
+}
+
+@media (max-width:500px) {
+    .banner{
+        h1{
+            font-family: Lexend;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 36px;
+            letter-spacing: -0.05em;
+            text-align: center;
+        }
+        p{
+            font-family: Lexend;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 28px;
+            text-align: center;
+            width: 312px;
+        }
+    }
+}

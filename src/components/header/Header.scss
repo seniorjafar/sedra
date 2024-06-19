@@ -1,0 +1,119 @@
+header{
+    padding: 20px 0;
+    box-shadow: 0px 4px 12px 0px #CFCFCF40;
+    position: sticky;
+    z-index: 5;
+    width: 100%;
+    top:0;
+    left:0;
+    background-color: #FFFFFF;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon{
+            display: flex;
+            gap: 25px;
+            svg{
+                color: #359740;
+                font-size: 24px;
+            }
+            .burger{
+                display: none;
+                cursor: pointer;
+            }
+        }
+        .nav__list ul{
+            display: flex;
+            gap: 32px;
+            li a{
+                color: #70737C;
+
+            }
+        }
+        .nav__icons{
+            display: flex;
+            gap: 8px;
+            svg{
+                font-size: 24px;
+                color: #70737C;
+            }
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .input{
+                border: 1px solid #EFEFEF;
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                gap: 10px;
+                border-radius: 20px;
+                input{
+                    border: none;
+                    outline: none;
+                }
+                svg{
+                    color: #70737C;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:1050px) {
+    .nav__list , .nav__icons{
+        display: none !important;
+    }
+}
+@media (max-width:500px) {
+    .input{
+        display: none !important;
+    }
+    .burger{
+        display: block !important;
+        border: none;
+        background-color: transparent;
+        svg{
+            color: black !important;
+            font-size: 26px !important;
+        }
+    }
+    .nav__list{
+        display: flex !important;
+        transition:  .3s ease-in-out;
+        width: 300px;
+        height: 100vh;
+        border-radius: 0 12px 12px 0;
+        background-color: #FFFFFF;
+        position: absolute;
+        scale: 1;
+        padding: 40px 30px;
+        top: 66px;
+        left: 0;
+        ul{
+            flex-direction: column !important;
+        }
+    }
+    .nav__list.show{
+        display: flex !important;
+        width: 300px;
+        height: 100vh;
+        border-radius: 0 12px 12px 0;
+        background-color: #FFFFFF;
+        position: absolute;
+        scale: 1;
+        padding: 40px 30px;
+        top: 70px;
+        left: 0;
+        ul{
+            flex-direction: column !important;
+        }
+    }
+    .nav__list{
+        scale: 0;
+        position: absolute;
+    }
+}
